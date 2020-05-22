@@ -31,7 +31,7 @@ async function makeChart() {
 
   // Preserve original state to restore from chart state changes
   window.chartDataLabels = labels.slice();
-  window.chartDatasetValues = dataSets.map(dataSet => dataSet.data);
+  window.chartDatasetValues = dataSets.map(dataSet => dataSet.data.slice());
 
 }
 
@@ -244,27 +244,45 @@ function addEventOptions(chart) {
       const element = chart.getElementAtEvent(event)[0];  // active element != clicked element
       const datasetIndex = element._datasetIndex;
       const dataset = chart.data.datasets[datasetIndex];
-      focus(dataset, datasetIndex, chart);
+      focus(dataset, chart);
     }
     else undoFocus(chart);
   }
 
 }
 
-function focus(focusedDataset, datasetIndex, chart) {
+function focus(focusedDataset, chart) {
 
-  if (chart.data.datasets.length == 1) return
+  // If some datasets have no data, then already focusing on something
+  if (chart.data.datasets.some(ds => ds.data.length == 0)) return
 
   // Remove non-focused datasets
   for (const dataset of chart.data.datasets) {
     if (dataset != focusedDataset) dataset.data = [];
   }
 
-  // Remove labels not used by focused dataset
-  chart.data.labels = window.chartDataLabels.filter((label, i) => focusedDataset.data[i] != undefined);
+  // Remove labels not used by focused dataset.
+  // In-place deletion to improve chart animation.
+  let offset = 0;
+  for (const [i, label] of Object.entries(chart.data.labels.slice())) {
+    // If label has no corresponding value in data, delete that label in-place
+    if (focusedDataset.data[i] == undefined) {
+      chart.data.labels.splice(i - offset, 1);
+      offset++;
+    }
+  }
 
   // Correct indexes so they match with new labels
-  focusedDataset.data = window.chartDatasetValues[datasetIndex].filter(value => value != undefined);
+  const clone = focusedDataset.data.slice();
+  offset = 0;
+  for (let i = 0; i < clone.length; i++) {
+    // If data missing for index, "delete" it (i.e. actually just decrements all indices),
+    // since corresponding label was previously removed
+    if (clone[i] == undefined) {
+      focusedDataset.data.splice(i - offset, 1);
+      offset++;
+    }
+  }
 
   chart.update();
 
@@ -272,10 +290,34 @@ function focus(focusedDataset, datasetIndex, chart) {
 
 function undoFocus(chart) {
 
-  // Restore labels and datasets with original indices
-  chart.data.labels = window.chartDataLabels;
+  // If every dataset has data, then already not focusing on anything
+  if (chart.data.datasets.every(ds => ds.data.length != 0)) return
+
+  // Restore labels
+  chart.data.labels = window.chartDataLabels.slice();
+
+  // Restore datasets
+  // Done in-place for improved chart animations
   for (const [i, dataset] of Object.entries(chart.data.datasets)) {
-    dataset.data = window.chartDatasetValues[i];
+
+    // If dataset was not in focus, restore everything
+    if (dataset.data.length == 0) dataset.data.push(...window.chartDatasetValues[i]);
+
+    // Otherwise, restore missing data in-place
+    else {
+      let workingDataIndex = 0;
+      for (const value of window.chartDatasetValues[i]) {
+        // If value undefined, then it was previously removed: put it back in.
+        // This is done to increment all indices until they are at their original values.
+        if (value == undefined) dataset.data.splice(workingDataIndex, 0, value);
+        workingDataIndex++;
+      }
+      // Cleanup by deleting explicity undefined elements, which have served their purpose
+      const clone = dataset.data.slice();
+      for (let j = 0; j < clone.length; j++) {
+        if (clone[j] == undefined) delete dataset.data[j];
+      }
+    }
   }
 
   chart.update();
