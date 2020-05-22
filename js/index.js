@@ -47,7 +47,7 @@ async function makeChart() {
 }
 
 async function getSongData(translations) {
-  const response = await fetch("band-songs.json");
+  const response = await fetch("data/band-songs.json");
   if (!response.ok) console.log("Couldn't load song data!");
   const songData = await response.json();
 
@@ -63,7 +63,7 @@ async function getSongData(translations) {
 }
 
 async function getTranslations() {
-  const response = await fetch("translations.json");
+  const response = await fetch("data/translations.json");
   if (!response.ok) console.log("Couldn't load translation data!");
   return await response.json();
 }
@@ -76,7 +76,7 @@ async function getTranslations() {
  * editions, remasters, etc.
  */
 async function getSongReleaseIndices() {
-  const response = await fetch("song-names.json");
+  const response = await fetch("data/song-names.json");
   if (!response.ok) console.log("Couldn't load song release order data!");
 
   const data = await response.json();

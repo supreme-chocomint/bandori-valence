@@ -6,7 +6,7 @@ Visualizes the emotional valence of BanG Dream songs, which is provided by Spoti
 
 ## Technical Notes
 
-`song-grabber.py` generates two JSON files: `band-songs.json` and `song-names.json`. Both required a few manual changes to be usable.
+`song-grabber.py` requires a file called `credentials.json` to work, which should have a Spotify `client_id` and `client_secret`. It generates two files: `band-songs.json` and `song-names.json`. Both required a few manual changes to be usable.
 
 Manual changes made to `band-songs.json`:
 - Removed all instrumental, acoustic, and short versions of songs
@@ -20,4 +20,4 @@ Manual changes made to `song-names.json`:
 - Removed character songs and songs from temporary or minor bands (e.g. The Third, Glitter*Green) 
 - Sorted songs to match actual album and single release dates (songs released in same single/album are in same order as single/album)
 
-Japanese song names on Spotify use the English exclamation marks (rather than Japanese ones, which are wider characters), but Japanese tildes (known as the wave dash: `〜`).
+Japanese song names on Spotify use the English exclamation marks rather than Japanese ones (which are wider characters), but Japanese tildes (known as the wave dash: `〜`) rather than English tildes.
