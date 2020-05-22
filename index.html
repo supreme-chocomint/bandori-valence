@@ -8,18 +8,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.min.js"></script>
     <script defer src="index.js"></script>
+    <script defer src="click-listeners.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
 <body>
     <section class="section">
         <div class="container">
-            <h1 class="title">
-                Bandori Valence
-            </h1>
-            <p class="subtitle">
-                Visualizing the happiest and saddest BanG Dream songs
-            </p>
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <h1 class="title">
+                        Bandori Valence
+                    </h1>
+                    <p class="subtitle">
+                        Visualizing the happiest and saddest BanG Dream songs
+                    </p>
+                </div>
+                <div class="column is-narrow">
+                    <button id="sorter" class="button is-info" data-state="0">Sort By Valence</button>
+                </div>
+            </div>
 
             <canvas id="valence-chart"></canvas>
         </div>

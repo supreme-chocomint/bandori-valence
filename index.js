@@ -10,10 +10,12 @@ async function makeChart() {
   const ctx = document.querySelector("#valence-chart");
 
   const translations = await getTranslations();
+  const songData = await getSongData(translations);
   const songReleaseIndices = await getSongReleaseIndices();
+  const songValenceIndices = getSongValenceIndices(songData);
 
   const labels = Object.keys(songReleaseIndices).map(name => translateIfPossible(name, translations));
-  const dataSets = await getDataSets(translations, songReleaseIndices);
+  const dataSets = getDataSets(songData, songReleaseIndices);
   const options = getBarGraphStaticOptions(labels);
 
   const chart = new Chart(ctx, {
@@ -29,16 +31,35 @@ async function makeChart() {
   // and adding static options after chart creation disables animations.
   addEventOptions(chart);
 
-  // Preserve original state to restore from chart state changes
-  window.chartDataLabels = labels.slice();
-  window.chartDatasetValues = dataSets.map(dataSet => dataSet.data.slice());
+  // Make chart accessible from DOM
+  window.chart = chart;
+
+  // Preserve original state to restore from chart state changes 
+  // and allow sorting
+  window.chartAttributes = {};
+  window.chartAttributes.dataLabels = labels.slice();
+  window.chartAttributes.datasetValues = dataSets.map(dataSet => dataSet.data.slice());
+  window.chartAttributes.songData = songData;
+  window.chartAttributes.translations = translations;
+  window.chartAttributes.songReleaseIndices = songReleaseIndices;
+  window.chartAttributes.songValenceIndices = songValenceIndices;
 
 }
 
-async function getSongData() {
+async function getSongData(translations) {
   const response = await fetch("band-songs.json");
   if (!response.ok) console.log("Couldn't load song data!");
-  return await response.json();
+  const songData = await response.json();
+
+  for (const songs of Object.values(songData)) {
+    for (const song of songs) {
+      song.native_name = song.name
+      song.name = translateIfPossible(song.name, translations);
+      //console.log(song.name);
+    }
+  }
+
+  return songData;
 }
 
 async function getTranslations() {
@@ -47,6 +68,13 @@ async function getTranslations() {
   return await response.json();
 }
 
+/**
+ * Maps native/original song names to index, where index is
+ * approximate release ordering (index 0 = first song released).
+ * Ordering is approximate because of issues like songs being released 
+ * on same day, previews being released ahead of actual releases, limited 
+ * editions, remasters, etc.
+ */
 async function getSongReleaseIndices() {
   const response = await fetch("song-names.json");
   if (!response.ok) console.log("Couldn't load song release order data!");
@@ -60,14 +88,23 @@ async function getSongReleaseIndices() {
   return indices;
 }
 
-function getSongsForBand(bandKey, songData, translations) {
-  const songs = songData[bandKey];
-  for (const song of songs) {
-    song.native_name = song.name
-    song.name = translateIfPossible(song.name, translations);
-    console.log(song.name);
-  }
-  return songs;
+/**
+ * Maps native/original song names to index, where index is 
+ * valence ordering (index 0 = song w/ lowest valence).
+ */
+function getSongValenceIndices(songData) {
+  const songs = Object.values(songData).flat();
+  const songNames = songs
+    .sort((a, b) => a.features.valence - b.features.valence)
+    .map(song => song.native_name);
+
+  const indices = {};
+  songNames.map((name, i) => indices[name] = i);
+  return indices;
+}
+
+function getSongsForBand(bandKey, songData) {
+  return songData[bandKey];
 }
 
 function translateIfPossible(songName, translations) {
@@ -76,46 +113,44 @@ function translateIfPossible(songName, translations) {
   else return songName;
 }
 
-async function getDataSets(translations, songReleaseIndices) {
-
-  const songData = await getSongData();
+function getDataSets(songData, songIndices) {
 
   return [
     {
       label: POPIPA,
       backgroundColor: '#FF5C92',
       borderColor: '#FF5C92',
-      data: getSongsForBandAsPointArray(POPIPA, songData, translations, songReleaseIndices)
+      data: getSongsForBandAsPointArray(POPIPA, songData, songIndices)
     },
     {
       label: ROSELIA,
       backgroundColor: "#3344AA",
       borderColor: "#3344AA",
-      data: getSongsForBandAsPointArray(ROSELIA, songData, translations, songReleaseIndices)
+      data: getSongsForBandAsPointArray(ROSELIA, songData, songIndices)
     },
     {
       label: AFTERGLOW,
       backgroundColor: "#E53344",
       borderColor: "#E53344",
-      data: getSongsForBandAsPointArray(AFTERGLOW, songData, translations, songReleaseIndices)
+      data: getSongsForBandAsPointArray(AFTERGLOW, songData, songIndices)
     },
     {
       label: PASUPARE,
       backgroundColor: "#85EBCC",
       borderColor: "#85EBCC",
-      data: getSongsForBandAsPointArray(PASUPARE, songData, translations, songReleaseIndices)
+      data: getSongsForBandAsPointArray(PASUPARE, songData, songIndices)
     },
     {
       label: HHW,
       backgroundColor: "#FFDD00",
       borderColor: "#FFDD00",
-      data: getSongsForBandAsPointArray(HHW, songData, translations, songReleaseIndices)
+      data: getSongsForBandAsPointArray(HHW, songData, songIndices)
     },
     {
       label: RAS,
       backgroundColor: "#1D6563",
       borderColor: "#1D6563",
-      data: getSongsForBandAsPointArray(RAS, songData, translations, songReleaseIndices)
+      data: getSongsForBandAsPointArray(RAS, songData, songIndices)
     }
   ]
 }
@@ -123,12 +158,12 @@ async function getDataSets(translations, songReleaseIndices) {
 /**
  * For point-based line graphs without global labels, and scatter plots.
  */
-function getSongsForBandAsPointObjects(bandKey, songData, translations, songReleaseIndices) {
-  const songs = getSongsForBand(bandKey, songData, translations);
+function getSongsForBandAsPointObjects(bandKey, songData, songIndices) {
+  const songs = getSongsForBand(bandKey, songData);
   const points = [];
   for (const song of songs) {
     const point = {
-      x: songReleaseIndices[song.native_name ? song.native_name : song.name],
+      x: songIndices[song.native_name ? song.native_name : song.name],
       y: song.features.valence,
       name: song.name
     };
@@ -140,11 +175,11 @@ function getSongsForBandAsPointObjects(bandKey, songData, translations, songRele
 /**
  * For bar graphs, and line graphs with global labels.
  */
-function getSongsForBandAsPointArray(bandKey, songData, translations, songReleaseIndices) {
-  const songs = getSongsForBand(bandKey, songData, translations);
+function getSongsForBandAsPointArray(bandKey, songData, songIndices) {
+  const songs = getSongsForBand(bandKey, songData);
   const points = [];
   for (const song of songs) {
-    points[songReleaseIndices[song.native_name ? song.native_name : song.name]] = song.features.valence;
+    points[songIndices[song.native_name ? song.native_name : song.name]] = song.features.valence;
   }
   return points;
 }
@@ -294,19 +329,19 @@ function undoFocus(chart) {
   if (chart.data.datasets.every(ds => ds.data.length != 0)) return
 
   // Restore labels
-  chart.data.labels = window.chartDataLabels.slice();
+  chart.data.labels = window.chartAttributes.dataLabels.slice();
 
   // Restore datasets
   // Done in-place for improved chart animations
   for (const [i, dataset] of Object.entries(chart.data.datasets)) {
 
     // If dataset was not in focus, restore everything
-    if (dataset.data.length == 0) dataset.data.push(...window.chartDatasetValues[i]);
+    if (dataset.data.length == 0) dataset.data.push(...window.chartAttributes.datasetValues[i]);
 
     // Otherwise, restore missing data in-place
     else {
       let workingDataIndex = 0;
-      for (const value of window.chartDatasetValues[i]) {
+      for (const value of window.chartAttributes.datasetValues[i]) {
         // If value undefined, then it was previously removed: put it back in.
         // This is done to increment all indices until they are at their original values.
         if (value == undefined) dataset.data.splice(workingDataIndex, 0, value);
@@ -320,6 +355,48 @@ function undoFocus(chart) {
     }
   }
 
+  chart.update();
+
+}
+
+function sortGraphByValence(chart) {
+
+  setGraphDataUsingIndices(
+    chart,
+    window.chartAttributes.songValenceIndices,
+    window.chartAttributes.songData,
+    window.chartAttributes.translations
+  );
+
+  // Update globals so that state changes adhere to new sort order
+  window.chartAttributes.dataLabels = chart.data.labels.slice();
+  window.chartAttributes.datasetValues = chart.data.datasets.map(dataSet => dataSet.data.slice());
+
+}
+
+function sortGraphByRelease(chart) {
+
+  setGraphDataUsingIndices(
+    chart,
+    window.chartAttributes.songReleaseIndices,
+    window.chartAttributes.songData,
+    window.chartAttributes.translations
+  );
+
+  // Update globals so that state changes adhere to new sort order
+  window.chartAttributes.dataLabels = chart.data.labels.slice();
+  window.chartAttributes.datasetValues = chart.data.datasets.map(dataSet => dataSet.data.slice());
+
+}
+
+function setGraphDataUsingIndices(chart, indices, songData, translations) {
+
+  const datasets = getDataSets(songData, indices);
+
+  chart.data.labels = Object.keys(indices)
+    .map(name => translateIfPossible(name, translations));
+
+  chart.data.datasets = datasets;
   chart.update();
 
 }
