@@ -284,6 +284,10 @@ function addEventOptions(chart) {
     else undoFocus(chart);
   }
 
+  // Disable legend onClick because it is not fired consistently
+  // when overwritten (standard onClick fired instead)
+  chart.options.legend.onClick = null;
+
 }
 
 function focus(focusedDataset, chart) {
