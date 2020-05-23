@@ -1,0 +1,15 @@
+#valence-chart-wrapper {
+  margin-bottom: 1rem;
+}
+
+#song-card {
+  border: 1px solid #99181F
+}
+
+.bottom-right-link {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: inherit;
+  cursor: pointer;
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bandori Valence</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.min.js"></script>
     <script defer src="js/index.js"></script>
     <script defer src="js/click-listeners.js"></script>
@@ -15,6 +16,7 @@
 <body>
     <section class="section">
         <div class="container">
+
             <div class="columns is-vcentered">
                 <div class="column">
                     <h1 class="title">
@@ -29,7 +31,32 @@
                 </div>
             </div>
 
-            <canvas id="valence-chart"></canvas>
+            <div id="valence-chart-wrapper" class="container">
+                <canvas id="valence-chart"></canvas>
+            </div>
+
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div id="song-card" class="card" style="display:none;">
+                        <div class="card-content">
+                            <p class="title is-4"></p>
+                            <p class="subtitle is-6"></p>
+                            <p>
+                                <span class="has-text-weight-semibold">Valence: </span><span
+                                    class="valence-value"></span><br>
+                                <span class="has-text-weight-semibold">Danceability: </span><span
+                                    class="danceability-value"></span><br>
+                                <span class="has-text-weight-semibold">Energy: </span><span
+                                    class="energy-value"></span><br>
+                            </p>
+                            <a rel="noreferrer" target="_blank" class="icon is-large bottom-right-link">
+                                <i class="fab fa-3x fa-spotify"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 </body>
