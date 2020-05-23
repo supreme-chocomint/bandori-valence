@@ -13,7 +13,7 @@
   <script defer src="js/data.js"></script>
   <script defer src="js/charting.js"></script>
   <script defer src="js/song-card.js"></script>
-  <script defer src="js/click-listeners.js"></script>
+  <script defer src="js/listeners.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
@@ -44,7 +44,8 @@
 
       <div class="columns is-centered">
         <div class="column is-half">
-          <div id="song-card" class="card" style="display:none;">
+          <!-- tabindex=-1 makes div focusable on click, but not by keyboard -->
+          <div id="song-card" class="card" style="display:none;" tabindex="-1">
             <div class="card-content">
               <p class="title is-4"></p>
               <p class="subtitle is-6"></p>
@@ -93,6 +94,8 @@
                 Click on a bar to show all songs from the corresponding band, as well as more information about that
                 particular song.<br>
                 Click on empty space to restore all songs.<br>
+                Click bottom box to enable keyboard (left/right) navigation through songs. Hitting the escape button on
+                the keyboard will also restore all songs.
               </p>
               <h3>
                 Other Definitions

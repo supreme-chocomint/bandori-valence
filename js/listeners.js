@@ -33,6 +33,15 @@ document.querySelector("#song-card .navigation-right").onclick = () => {
   );
 }
 
+document.querySelector("#song-card").onkeydown = (event) => {
+  if (event.code == "ArrowLeft") document.querySelector("#song-card .navigation-left").onclick();
+  else if (event.code == "ArrowRight") document.querySelector("#song-card .navigation-right").onclick();
+  else if (event.code == "Escape") {
+    // Simulate clicking empty space on chart
+    window.chart.options.onClick(null, []);
+  }
+}
+
 // Modal dismiss
 for (const el of document.querySelectorAll(".modal")) {
   el.querySelector(".modal-background").onclick = () => {
