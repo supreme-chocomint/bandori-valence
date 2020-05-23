@@ -16,8 +16,8 @@ def main():
             client_secret=data['client_secret']
         ))
 
-    dump_band_songs(sp, 'band-songs.json')
-    dump_song_name_list(sp, 'song-names.json')
+    dump_band_songs(sp, '../data/band-songs.json')
+    dump_song_name_list(sp, '../data/song-names.json')
 
 
 def dump_band_songs(spotify, out_filename):
