@@ -48,73 +48,6 @@ async function makeChart() {
 
 }
 
-async function getSongData(translations) {
-  const response = await fetch("data/band-songs.json");
-  if (!response.ok) console.log("Couldn't load song data!");
-  const songData = await response.json();
-
-  for (const songs of Object.values(songData)) {
-    for (const song of songs) {
-      song.native_name = song.name
-      song.name = translateIfPossible(song.name, translations);
-      //console.log(song.name);
-    }
-  }
-
-  return songData;
-}
-
-async function getTranslations() {
-  const response = await fetch("data/translations.json");
-  if (!response.ok) console.log("Couldn't load translation data!");
-  return await response.json();
-}
-
-/**
- * Maps native/original song names to index, where index is
- * approximate release ordering (index 0 = first song released).
- * Ordering is approximate because of issues like songs being released 
- * on same day, previews being released ahead of actual releases, limited 
- * editions, remasters, etc.
- */
-async function getSongReleaseIndices() {
-  const response = await fetch("data/song-names.json");
-  if (!response.ok) console.log("Couldn't load song release order data!");
-
-  const data = await response.json();
-  const indices = {};
-  for (const [i, name] of Object.entries(data.names)) {
-    indices[name] = i;
-  }
-
-  return indices;
-}
-
-/**
- * Maps native/original song names to index, where index is 
- * valence ordering (index 0 = song w/ lowest valence).
- */
-function getSongValenceIndices(songData) {
-  const songs = Object.values(songData).flat();
-  const songNames = songs
-    .sort((a, b) => a.features.valence - b.features.valence)
-    .map(song => song.native_name);
-
-  const indices = {};
-  songNames.map((name, i) => indices[name] = i);
-  return indices;
-}
-
-function getSongsForBand(bandKey, songData) {
-  return songData[bandKey];
-}
-
-function translateIfPossible(songName, translations) {
-  const translation = translations[songName];
-  if (translation) return translation;
-  else return songName;
-}
-
 function getDataSets(songData, songIndices) {
 
   return [
@@ -406,30 +339,6 @@ function setGraphDataUsingIndices(chart, indices, songData, translations) {
 
   chart.data.datasets = datasets;
   chart.update();
-
-}
-
-function showInCard(index, datasetIndex, chart) {
-
-  const name = chart.data.labels[index];
-  const band = chart.data.datasets[datasetIndex].label;
-  const song = window.chartAttributes.songData[band].find(song => song.name == name);
-
-  const nativeName = song.native_name;
-  const danceability = song.features.danceability;
-  const energy = song.features.energy;
-  const valence = song.features.valence;
-  const url = song.external_urls.spotify;
-
-  const card = document.querySelector('#song-card');
-  card.style.display = 'block';
-
-  card.querySelector('.title').innerHTML = name
-  card.querySelector('.subtitle').innerHTML = band + (nativeName == name ? '' : ` / ${nativeName}`);
-  card.querySelector('.valence-value').innerHTML = valence;
-  card.querySelector('.danceability-value').innerHTML = danceability;
-  card.querySelector('.energy-value').innerHTML = energy;
-  card.querySelector('.bottom-right-link').href = url;
 
 }
 
