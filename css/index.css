@@ -1,8 +1,14 @@
+body,
+button {
+  font-family: 'Lato', 'Noto Sans JP', sans-serif;
+}
+
 #valence-chart-wrapper {
   margin-bottom: 1rem;
 }
 
 #song-card {
+  margin: 1rem;
   border: 1px solid #99181F
 }
 

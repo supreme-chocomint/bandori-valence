@@ -27,6 +27,8 @@ async function makeChart() {
     options: options
   });
 
+  Chart.defaults.global.defaultFontFamily = "'Inter', sans-serif";
+
   // Add events afterwords, since they need reference to chart, 
   // and adding static options after chart creation disables animations.
   addEventOptions(chart);
