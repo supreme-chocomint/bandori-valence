@@ -4,7 +4,9 @@
 
 Visualizes the emotional valence of BanG Dream songs, which is provided by Spotify. Spotify defines valence as a measure of "musical positiveness", with higher-value songs sounding more positive (happy or cheery) and lower-value songs sounding more negative (depressed or angry).
 
-## Technical Notes
+The data was collected using a Python script (found in `python/song-grabber.py`), and deposited into the `data` directory for use by the website.
+
+## Technical Notes For Data Collection
 
 `song-grabber.py` requires a file called `credentials.json` to work, which should have a Spotify `client_id` and `client_secret`. It generates two files: `band-songs.json` and `song-names.json`. Both required a few manual changes to be usable.
 
