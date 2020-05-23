@@ -15,6 +15,16 @@
   <script defer src="js/song-card.js"></script>
   <script defer src="js/listeners.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script>
+    (function (e, t, n, i, s, a, c) {
+      e[n] = e[n] || function () { (e[n].q = e[n].q || []).push(arguments) }
+        ; a = t.createElement(i); c = t.getElementsByTagName(i)[0]; a.async = true; a.src = s
+        ; c.parentNode.insertBefore(a, c)
+    })(window, document, "galite", "script", "https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+
+    galite('create', 'UA-165670650-2', 'auto');
+    galite('send', 'pageview');
+  </script>
 </head>
 
 <body>
@@ -37,6 +47,12 @@
           <button id="sorter" class="button is-info" data-state="0">Sort By Valence</button>
         </div>
       </div>
+
+      <noscript>
+        <p>
+          JavaScript is required for visualization: please enable it.
+        </p>
+      </noscript>
 
       <div id="valence-chart-wrapper" class="container">
         <canvas id="valence-chart"></canvas>
