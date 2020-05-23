@@ -12,10 +12,22 @@ button {
   border: 1px solid #99181F
 }
 
-.bottom-right-link {
+.top-right {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.bottom-right {
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
-  color: inherit;
+}
+
+.clickable {
   cursor: pointer;
+}
+
+.inherit-color {
+  color: inherit;
 }

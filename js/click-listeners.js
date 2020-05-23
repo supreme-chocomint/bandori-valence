@@ -13,6 +13,26 @@ document.querySelector("#sorter").onclick = (event) => {
   }
 }
 
+document.querySelector("#song-card .navigation-left").onclick = () => {
+  const card = document.querySelector("#song-card");
+  showPreviousInCard(
+    parseInt(card.dataset.chartIndex),
+    parseInt(card.dataset.chartDatasetIndex),
+    window.chart,
+    window.chartAttributes.focusing
+  );
+}
+
+document.querySelector("#song-card .navigation-right").onclick = () => {
+  const card = document.querySelector("#song-card");
+  showNextInCard(
+    parseInt(card.dataset.chartIndex),
+    parseInt(card.dataset.chartDatasetIndex),
+    window.chart,
+    window.chartAttributes.focusing
+  );
+}
+
 // Modal dismiss
 for (const el of document.querySelectorAll(".modal")) {
   el.querySelector(".modal-background").onclick = () => {

@@ -45,6 +45,7 @@ async function makeChart() {
   window.chartAttributes.translations = translations;
   window.chartAttributes.songReleaseIndices = songReleaseIndices;
   window.chartAttributes.songValenceIndices = songValenceIndices;
+  window.chartAttributes.focusing = false;
 
 }
 
@@ -218,7 +219,10 @@ function addEventOptions(chart) {
       focus(dataset, chart);
       showInCard(element._index, datasetIndex, chart);
     }
-    else undoFocus(chart);
+    else {
+      undoFocus(chart);
+      notifyCardIndexChanged(chart);
+    }
   }
 
   // Disable legend onClick because it is not fired consistently
@@ -260,6 +264,7 @@ function focus(focusedDataset, chart) {
     }
   }
 
+  window.chartAttributes.focusing = true;
   chart.update();
 
 }
@@ -296,6 +301,7 @@ function undoFocus(chart) {
     }
   }
 
+  window.chartAttributes.focusing = false;
   chart.update();
 
 }
@@ -339,6 +345,9 @@ function setGraphDataUsingIndices(chart, indices, songData, translations) {
 
   chart.data.datasets = datasets;
   chart.update();
+
+  window.chartAttributes.focusing = false;
+  notifyCardIndexChanged(chart);
 
 }
 
