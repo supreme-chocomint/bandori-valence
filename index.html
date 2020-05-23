@@ -26,6 +26,9 @@
           </h1>
           <p class="subtitle">
             Visualizing the happiest and saddest BanG Dream songs
+            <a id="launch-help-modal">
+              [?]
+            </a>
           </p>
         </div>
         <div class="column is-narrow">
@@ -53,6 +56,56 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div id="help-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Help</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <div class="content">
+              <h3>
+                Overview
+              </h3>
+              <p>
+                Every song on Spotify has a "valence" value, which is a measure of "musical positiveness" (presumably
+                calculated using machine learning). Valence ranges from 0 to 1, where 0 is a very negative (depressed,
+                angry, etc) song and 1 is a very positive (happy, cheerful, etc) song.
+              </p>
+              <h3>
+                Usage Tips
+              </h3>
+              <p>
+                Click on a bar to show all songs from the corresponding band, as well as more information about that particular song.<br>
+                Click on empty space to restore all songs.<br>
+              </p>
+              <h3>
+                Other Definitions
+              </h3>
+              <p>
+                <strong>Danceability:</strong> how suitable a song is for dancing, based on tempo, rhythm, and beat strength. 0 is least
+                suitable, 1 is most suitable.
+              </p>
+              <p>
+                <strong>Energy:</strong> the intensity, loudness, and activeness of a song. 0 is low energy, 1 is high energy.
+              </p>
+              <h3>
+                Further Reading
+              </h3>
+              <p>
+                More details about measures and other audio features can be found on <a rel="noreferrer" target="_blank"
+                  href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/">Spotify's
+                  API documentation</a>.
+              </p>
+              <p>
+                Source code for tool and data is available on <a target="_blank" href="https://github.com/supreme-chocomint/bandori-valence">Github</a>.
+              </p>
+            </div>
+          </section>
         </div>
       </div>
 
