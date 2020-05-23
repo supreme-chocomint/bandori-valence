@@ -262,6 +262,7 @@ function getBarGraphStaticOptions(labels) {
       }]
     },
     tooltips: {
+      displayColors: false,
       callbacks: {
         title: function (tooltipItem, data) {
           return data.labels[tooltipItem[0].index];
