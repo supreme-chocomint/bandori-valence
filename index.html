@@ -51,10 +51,15 @@
           </h1>
           <p class="subtitle">
             Visualizing the happiest and saddest BanG Dream songs
-            <a id="launch-help-modal">
+            <a id="launch-help-modal" tabindex="0">
               [?]
             </a>
           </p>
+        </div>
+        <div class="column is-narrow">
+          <span class="tag is-dark valence-chart-focus is-hidden">
+            Keyboard Nav On
+          </span>
         </div>
         <div class="column is-narrow">
           <button id="sorter" class="button is-info" data-state="0">Sort By Valence</button>
@@ -68,13 +73,12 @@
       </noscript>
 
       <div id="valence-chart-wrapper" class="container">
-        <canvas id="valence-chart"></canvas>
+        <canvas id="valence-chart" tabindex="0"></canvas>
       </div>
 
       <div class="columns is-centered">
         <div class="column is-half">
-          <!-- tabindex=-1 makes div focusable on click, but not by keyboard -->
-          <div id="song-card" class="card" style="display:none;" tabindex="-1">
+          <div id="song-card" class="card" style="display:none;">
             <div class="card-content">
               <p class="title is-4"></p>
               <p class="subtitle is-6"></p>
@@ -120,18 +124,32 @@
             negative-sounding song
             and 1 is a very positive-sounding song.
           </p>
+
           <h3>
             Usage Tips
           </h3>
           <p>
+            Keyboard navigation of the chart can be activated anywhere with the <strong>period</strong> key, and
+            deactivated with the <strong>comma</strong> key (clicking inside/outside the chart also works).
+          </p>
+          <p>
+            Controls:
           <ul>
-            <li>Clicking on a bar in the chart will both focus all songs from the corresponding band, as well as
-              show a song info box</li>
-            <li>Clicking on empty space in the chart to restore all songs</li>
-            <li>Clicking on the bottom song box will enable keyboard (left/right) navigation through songs. While
-              keyboard navigation is enabled, hitting the keyboard escape button will also restore all songs</li>
+            <li>
+              <strong>Left and right:</strong> move between songs
+            </li>
+            <li>
+              <strong>Space:</strong> toggle sort
+            </li>
+            <li>
+              <strong>Enter:</strong> focus on band of highlighted song, and show song info
+            </li>
+            <li>
+              <strong>Escape or backspace:</strong> de-focus band
+            </li>
           </ul>
           </p>
+
           <h3>
             Other Definitions
           </h3>
@@ -144,6 +162,7 @@
             <strong>Energy:</strong> the intensity, loudness, and activeness of a song. 0 is low energy, 1 is high
             energy.
           </p>
+
           <h3>
             Further Reading
           </h3>

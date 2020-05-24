@@ -12,8 +12,8 @@ button {
   border: 1px solid #99181F
 }
 
-#song-card:focus {
-  outline: 2px solid #99181F
+#valence-chart:focus {
+  outline: none;
 }
 
 .top-right {

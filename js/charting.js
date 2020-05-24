@@ -36,6 +36,9 @@ async function makeChart() {
   // Make chart accessible from DOM
   window.chart = chart;
 
+  // Focus on chart in HTML
+  ctx.focus();
+
   // Preserve original state to restore from chart state changes 
   // and allow sorting
   window.chartAttributes = {};
@@ -45,7 +48,7 @@ async function makeChart() {
   window.chartAttributes.translations = translations;
   window.chartAttributes.songReleaseIndices = songReleaseIndices;
   window.chartAttributes.songValenceIndices = songValenceIndices;
-  window.chartAttributes.focusing = false;
+  window.chartAttributes.focusing = false;  // not the same as the HTML focus above
 
 }
 
@@ -220,8 +223,8 @@ function addEventOptions(chart) {
       showInCard(element._index, datasetIndex, chart);
     }
     else {
-      undoFocus(chart);
-      notifyCardIndexChanged(chart);
+      const stateChange = undoFocus(chart);
+      if (stateChange) notifyCardIndexChanged(chart);
     }
   }
 
@@ -231,10 +234,13 @@ function addEventOptions(chart) {
 
 }
 
+/**
+ * Returns true if focus achieved, false if already focusing.
+ */
 function focus(focusedDataset, chart) {
 
   // If some datasets have no data, then already focusing on something
-  if (chart.data.datasets.some(ds => ds.data.length == 0)) return
+  if (chart.data.datasets.some(ds => ds.data.length == 0)) return false;
 
   // Remove non-focused datasets
   for (const dataset of chart.data.datasets) {
@@ -266,13 +272,17 @@ function focus(focusedDataset, chart) {
 
   window.chartAttributes.focusing = true;
   chart.update();
+  return true;
 
 }
 
+/**
+ * Returns true if focus was undone, false if already not focusing.
+ */
 function undoFocus(chart) {
 
   // If every dataset has data, then already not focusing on anything
-  if (chart.data.datasets.every(ds => ds.data.length != 0)) return
+  if (chart.data.datasets.every(ds => ds.data.length != 0)) return false;
 
   // Restore labels
   chart.data.labels = window.chartAttributes.dataLabels.slice();
@@ -303,6 +313,7 @@ function undoFocus(chart) {
 
   window.chartAttributes.focusing = false;
   chart.update();
+  return true;
 
 }
 
