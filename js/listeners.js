@@ -37,13 +37,16 @@ document.querySelector("#song-card .navigation-right").onclick = () => {
   );
 }
 
-// Toggle the focus state of the chart
+// Global keyboard shortcuts
 document.onkeydown = (event) => {
   if (event.code == "Period") {
     document.querySelector("#valence-chart").focus();
   }
   else if (event.code == "Comma") {
     document.querySelector("#valence-chart").blur();
+  }
+  else if (event.code == "KeyH") {
+    document.querySelector("#help-modal").classList.toggle("is-active");
   }
 }
 
@@ -70,7 +73,7 @@ document.querySelector("#valence-chart").onkeydown = (event) => {
       document.querySelector("#song-card .navigation-right").onclick();
       break;
 
-    case "Backspace":
+    case "Backslash":
     case "Escape":
       // Simulate clicking empty space on chart
       window.chart.options.onClick(null, []);

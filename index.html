@@ -110,19 +110,32 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Help</p>
+        <p class="modal-card-title">Help / FAQ</p>
         <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
         <div class="content">
           <h3>
-            Overview
+            What is Valence?
           </h3>
           <p>
-            Every song on Spotify has a <strong>valence</strong> value, which is a measure of "musical positiveness"
-            (presumably calculated using machine learning). Valence ranges from 0 to 1, where 0 is a very
-            negative-sounding song
-            and 1 is a very positive-sounding song.
+            Valence is how positive (happy, cheery, etc) a song sounds.
+          </p>
+          <p>
+            Every song on Spotify has a predicted valence value, which is presumably calculated using machine learning.
+            Valence ranges from 0 to 1, where 0 is a very negative-sounding song and 1 is a very positive-sounding song.
+          </p>
+
+          <h3>
+            Other Definitions
+          </h3>
+          <p>
+            <strong>Danceability:</strong> how suitable a song is for dancing. Based on tempo, rhythm regularity, and
+            beat strength. 0 is least suitable, 1 is most suitable.
+          </p>
+          <p>
+            <strong>Energy:</strong> the intensity, loudness, and activeness of a song. 0 is low energy, 1 is high
+            energy.
           </p>
 
           <h3>
@@ -130,37 +143,28 @@
           </h3>
           <p>
             Keyboard navigation of the chart can be activated anywhere with the <strong>period</strong> key, and
-            deactivated with the <strong>comma</strong> key (clicking inside/outside the chart also works).
+            deactivated with the <strong>comma</strong> key (clicking inside/outside the chart also works). The
+            <strong>h</strong> key also shows/hides this help popup.
           </p>
           <p>
-            Controls:
+            Controls For Keyboard Navigation:
           <ul>
             <li>
-              <strong>Left and right:</strong> move between songs
+              <strong>Left</strong> and <strong>right</strong> - move between songs
             </li>
             <li>
-              <strong>Space:</strong> toggle sort
+              <strong>Space</strong> - toggle sort
             </li>
             <li>
-              <strong>Enter:</strong> focus on band of highlighted song, and show song info
+              <strong>Enter</strong> - focus on band of highlighted song, and show song info
             </li>
             <li>
-              <strong>Escape or backspace:</strong> de-focus band
+              <strong>ESC</strong> or <strong>\</strong> - de-focus band
             </li>
           </ul>
           </p>
+          <p>
 
-          <h3>
-            Other Definitions
-          </h3>
-          <p>
-            <strong>Danceability:</strong> how suitable a song is for dancing, based on tempo, rhythm, and beat
-            strength. 0 is least
-            suitable, 1 is most suitable.
-          </p>
-          <p>
-            <strong>Energy:</strong> the intensity, loudness, and activeness of a song. 0 is low energy, 1 is high
-            energy.
           </p>
 
           <h3>
@@ -169,14 +173,12 @@
           <p>
             More details about measures and other audio features can be found on <a rel="noreferrer" target="_blank"
               href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/">Spotify's
-              API documentation</a>.
-          </p>
-          <p>
-            Source code for tool and data is available on <a target="_blank"
+              API documentation</a>. Source code for tool and data is available on <a target="_blank"
               href="https://github.com/supreme-chocomint/bandori-valence">Github</a>.
           </p>
         </div>
       </section>
+      <footer class="modal-card-foot"></footer>
     </div>
   </div>
 
