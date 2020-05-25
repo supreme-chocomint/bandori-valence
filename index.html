@@ -44,7 +44,7 @@
   <section class="section">
     <div class="container">
 
-      <div class="columns is-vcentered">
+      <div class="columns is-vcentered is-mobile">
         <div class="column">
           <h1 class="title">
             Bandori Valence
@@ -80,23 +80,33 @@
         <div class="column is-half">
           <div id="song-card" class="card" style="display:none;">
             <div class="card-content">
-              <p class="title is-4"></p>
-              <p class="subtitle is-6"></p>
-              <p>
-                <span class="has-text-weight-semibold">Valence: </span><span class="valence-value"></span><br>
-                <span class="has-text-weight-semibold">Danceability: </span><span class="danceability-value"></span><br>
-                <span class="has-text-weight-semibold">Energy: </span><span class="energy-value"></span><br>
-              </p>
-              <a rel="noreferrer" target="_blank" class="icon is-large top-right inherit-color">
-                <i class="fab fa-3x fa-spotify"></i>
-              </a>
-              <div class="bottom-right navigation has-background-info has-text-light">
-                <span class="icon is-medium clickable navigation-left">
-                  <i class="fas fa-lg fa-chevron-left"></i>
-                </span>
-                <span class="icon is-medium clickable navigation-right">
-                  <i class="fas fa-lg fa-chevron-right"></i>
-                </span>
+              <div class="columns is-mobile">
+
+                <div class="column">
+                  <p class="title is-4"></p>
+                  <p class="subtitle is-6"></p>
+                  <p>
+                    <span class="has-text-weight-semibold">Valence: </span><span class="valence-value"></span><br>
+                    <span class="has-text-weight-semibold">Danceability: </span><span
+                      class="danceability-value"></span><br>
+                    <span class="has-text-weight-semibold">Energy: </span><span class="energy-value"></span><br>
+                  </p>
+                </div>
+
+                <div class="column is-narrow has-clickables-vertical">
+                  <a rel="noreferrer" target="_blank" class="icon is-large inherit-color">
+                    <i class="fab fa-3x fa-spotify"></i>
+                  </a>
+                  <div class="navigation has-background-info has-text-light">
+                    <span class="icon is-medium clickable navigation-left">
+                      <i class="fas fa-lg fa-chevron-left"></i>
+                    </span>
+                    <span class="icon is-medium clickable navigation-right">
+                      <i class="fas fa-lg fa-chevron-right"></i>
+                    </span>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
