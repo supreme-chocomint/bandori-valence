@@ -30,3 +30,17 @@ button {
 .inherit-color {
   color: inherit;
 }
+
+@media screen and (min-width:769px) {
+  .modal-card {
+    width: 770px;
+  }
+}
+
+/* Use modal without footer, because it causes 
+ * missing spacing at body bottom on Firefox
+ */
+.modal-card-body {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
