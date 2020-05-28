@@ -15,6 +15,10 @@ RAISE_A_SUILEN = {
     'abbreviation': 'RAS',
     'playlist_id': '1EBMnPaxC37tCeBhiAKnxp'
 }
+MORFONICA = {
+    'id': '12BquJvJVg8XFRB3M90MmJ',
+    'name': 'Morfonica'
+}
 AFTERGLOW = {
     'id': '4Gahj9N72kVKOBZbKMu0OI',
     'name': 'Afterglow',
@@ -32,4 +36,19 @@ HELLO_HAPPY_WORLD = {
     'abbreviation': 'HHW',
     'playlist_id': '2tn9hYFAX1G0jGqiTD3tXO'
 }
+
 PLAYLIST_ID = "4M0aH9xVLOilYreFAsGMQy"
+
+BANDS = [
+    ROSELIA,
+    PASTEL_PALETTES,
+    AFTERGLOW,
+    HELLO_HAPPY_WORLD,
+    POPPIN_PARTY,
+    RAISE_A_SUILEN,
+    MORFONICA
+]
+
+CREDENTIALS_FILE = 'credentials.json'
+BAND_SONGS_FILE = '../data/band-songs.json'
+SONG_NAMES_FILE = '../data/song-names.json'

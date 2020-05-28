@@ -13115,5 +13115,115 @@
                 "time_signature": 4
             }
         }
+    ],
+    "Morfonica": [
+        {
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/12BquJvJVg8XFRB3M90MmJ"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/12BquJvJVg8XFRB3M90MmJ",
+                    "id": "12BquJvJVg8XFRB3M90MmJ",
+                    "name": "Morfonica",
+                    "type": "artist",
+                    "uri": "spotify:artist:12BquJvJVg8XFRB3M90MmJ"
+                }
+            ],
+            "available_markets": [
+                "JP"
+            ],
+            "disc_number": 1,
+            "duration_ms": 270333,
+            "explicit": false,
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/39qOf330P5x9h4JCRBMQhV"
+            },
+            "href": "https://api.spotify.com/v1/tracks/39qOf330P5x9h4JCRBMQhV",
+            "id": "39qOf330P5x9h4JCRBMQhV",
+            "is_local": false,
+            "name": "\u91d1\u8272\u3078\u306e\u30d7\u30ec\u30ea\u30e5\u30fc\u30c9",
+            "preview_url": "https://p.scdn.co/mp3-preview/938e6b51027d6d14e85f6502b975ffbd6ed8a05a?cid=b382848b54c2463d9baed53ddffc7075",
+            "track_number": 2,
+            "type": "track",
+            "uri": "spotify:track:39qOf330P5x9h4JCRBMQhV",
+            "album_name": "Daylight -\u30c7\u30a4\u30e9\u30a4\u30c8-",
+            "album_release_date": "2020-05-27",
+            "album_release_date_precision": "day",
+            "features": {
+                "danceability": 0.389,
+                "energy": 0.883,
+                "key": 0,
+                "loudness": -2.647,
+                "mode": 1,
+                "speechiness": 0.103,
+                "acousticness": 0.000666,
+                "instrumentalness": 0.251,
+                "liveness": 0.466,
+                "valence": 0.562,
+                "tempo": 174.906,
+                "type": "audio_features",
+                "id": "39qOf330P5x9h4JCRBMQhV",
+                "uri": "spotify:track:39qOf330P5x9h4JCRBMQhV",
+                "track_href": "https://api.spotify.com/v1/tracks/39qOf330P5x9h4JCRBMQhV",
+                "analysis_url": "https://api.spotify.com/v1/audio-analysis/39qOf330P5x9h4JCRBMQhV",
+                "duration_ms": 270333,
+                "time_signature": 4
+            }
+        },
+        {
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/12BquJvJVg8XFRB3M90MmJ"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/12BquJvJVg8XFRB3M90MmJ",
+                    "id": "12BquJvJVg8XFRB3M90MmJ",
+                    "name": "Morfonica",
+                    "type": "artist",
+                    "uri": "spotify:artist:12BquJvJVg8XFRB3M90MmJ"
+                }
+            ],
+            "available_markets": [
+                "JP"
+            ],
+            "disc_number": 1,
+            "duration_ms": 350300,
+            "explicit": false,
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/7lbb1e459rAhDVp0EjLokE"
+            },
+            "href": "https://api.spotify.com/v1/tracks/7lbb1e459rAhDVp0EjLokE",
+            "id": "7lbb1e459rAhDVp0EjLokE",
+            "is_local": false,
+            "name": "Daylight -\u30c7\u30a4\u30e9\u30a4\u30c8-",
+            "preview_url": "https://p.scdn.co/mp3-preview/3a1ed22070a4ef89372f94e035e52f333232c4f8?cid=b382848b54c2463d9baed53ddffc7075",
+            "track_number": 1,
+            "type": "track",
+            "uri": "spotify:track:7lbb1e459rAhDVp0EjLokE",
+            "album_name": "Daylight -\u30c7\u30a4\u30e9\u30a4\u30c8-",
+            "album_release_date": "2020-05-27",
+            "album_release_date_precision": "day",
+            "features": {
+                "danceability": 0.465,
+                "energy": 0.922,
+                "key": 9,
+                "loudness": -2.743,
+                "mode": 0,
+                "speechiness": 0.0584,
+                "acousticness": 0.000516,
+                "instrumentalness": 0.499,
+                "liveness": 0.0468,
+                "valence": 0.514,
+                "tempo": 92.399,
+                "type": "audio_features",
+                "id": "7lbb1e459rAhDVp0EjLokE",
+                "uri": "spotify:track:7lbb1e459rAhDVp0EjLokE",
+                "track_href": "https://api.spotify.com/v1/tracks/7lbb1e459rAhDVp0EjLokE",
+                "analysis_url": "https://api.spotify.com/v1/audio-analysis/7lbb1e459rAhDVp0EjLokE",
+                "duration_ms": 350300,
+                "time_signature": 4
+            }
+        }
     ]
 }

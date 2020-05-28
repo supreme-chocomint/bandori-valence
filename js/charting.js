@@ -4,6 +4,7 @@ const AFTERGLOW = "Afterglow";
 const PASUPARE = "Pastel*Palettes";
 const HHW = "Hello, Happy World!";
 const RAS = "Raise A Suilen";
+const MORFONICA = "Morfonica";
 
 async function makeChart() {
 
@@ -90,6 +91,12 @@ function getDataSets(songData, songIndices) {
       backgroundColor: "#1D6563",
       borderColor: "#1D6563",
       data: getSongsForBandAsPointArray(RAS, songData, songIndices)
+    },
+    {
+      label: MORFONICA,
+      backgroundColor: "#33AAFF",
+      borderColor: "#33AAFF",
+      data: getSongsForBandAsPointArray(MORFONICA, songData, songIndices)
     }
   ]
 }
