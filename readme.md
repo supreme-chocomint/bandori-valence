@@ -16,7 +16,7 @@ The data was collected using a Python script (found in `python/song-grabber.py`)
 
 1. Make a [Spotify Developer account](https://developer.spotify.com/dashboard/) and create a client ID/secret
 2. Create `credentials.json` inside the `python` directory
-3. Run `pip install -r requirements.txt` in the root directory
+3. Run `pip install -r python/requirements.txt` in the root directory
 4. Run `python python/song-grabber.py <ARGUMENT>` in the root directory
 
 The argument for the script defines the action to do; it may require additional values to be passed as well. Run `python python/song-grabber.py -h` for details.
