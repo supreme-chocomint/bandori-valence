@@ -59,43 +59,36 @@ function getDataSets(songData, songIndices) {
     {
       label: POPIPA,
       backgroundColor: '#FF5C92',
-      borderColor: '#FF5C92',
       data: getSongsForBandAsPointArray(POPIPA, songData, songIndices)
     },
     {
       label: ROSELIA,
       backgroundColor: "#3344AA",
-      borderColor: "#3344AA",
       data: getSongsForBandAsPointArray(ROSELIA, songData, songIndices)
     },
     {
       label: AFTERGLOW,
       backgroundColor: "#E53344",
-      borderColor: "#E53344",
       data: getSongsForBandAsPointArray(AFTERGLOW, songData, songIndices)
     },
     {
       label: PASUPARE,
       backgroundColor: "#85EBCC",
-      borderColor: "#85EBCC",
       data: getSongsForBandAsPointArray(PASUPARE, songData, songIndices)
     },
     {
       label: HHW,
       backgroundColor: "#FFDD00",
-      borderColor: "#FFDD00",
       data: getSongsForBandAsPointArray(HHW, songData, songIndices)
     },
     {
       label: RAS,
       backgroundColor: "#1D6563",
-      borderColor: "#1D6563",
       data: getSongsForBandAsPointArray(RAS, songData, songIndices)
     },
     {
       label: MORFONICA,
       backgroundColor: "#33AAFF",
-      borderColor: "#33AAFF",
       data: getSongsForBandAsPointArray(MORFONICA, songData, songIndices)
     }
   ]
