@@ -3,6 +3,11 @@ button {
   font-family: 'Lato', 'Noto Sans JP', sans-serif;
 }
 
+.is-paddingless-vertical {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 #valence-chart-wrapper {
   margin-bottom: 1rem;
 }
