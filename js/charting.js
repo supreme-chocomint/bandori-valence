@@ -17,7 +17,7 @@ async function makeChart() {
 
   const labels = Object.keys(songReleaseIndices).map(name => translateIfPossible(name, translations));
   const dataSets = getDataSets(songData, songReleaseIndices);
-  const options = getBarGraphStaticOptions(labels);
+  const options = getBarGraphStaticOptions();
 
   const chart = new Chart(ctx, {
     type: 'bar',
@@ -175,7 +175,7 @@ function getLineGraphStaticOptions() {
   }
 }
 
-function getBarGraphStaticOptions(labels) {
+function getBarGraphStaticOptions() {
   return {
     aspectRatio: 2.5,
     scales: {
