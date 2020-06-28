@@ -6763,6 +6763,330 @@
     ],
     "Poppin'Party": [
         {
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2XzrQN7hxZibYdVEbl0nO6"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/2XzrQN7hxZibYdVEbl0nO6",
+                    "id": "2XzrQN7hxZibYdVEbl0nO6",
+                    "name": "Poppin'Party",
+                    "type": "artist",
+                    "uri": "spotify:artist:2XzrQN7hxZibYdVEbl0nO6"
+                }
+            ],
+            "available_markets": [
+                "JP"
+            ],
+            "disc_number": 1,
+            "duration_ms": 355300,
+            "explicit": false,
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/68NLAMcxHcRkBWxPgadrqC"
+            },
+            "href": "https://api.spotify.com/v1/tracks/68NLAMcxHcRkBWxPgadrqC",
+            "id": "68NLAMcxHcRkBWxPgadrqC",
+            "is_local": false,
+            "name": "\u30df\u30e9\u30a4\u30c8\u30ec\u30a4\u30f3",
+            "preview_url": "https://p.scdn.co/mp3-preview/adca02a0cebe1d482de44432b3503e7692f490b6?cid=b382848b54c2463d9baed53ddffc7075",
+            "track_number": 12,
+            "type": "track",
+            "uri": "spotify:track:68NLAMcxHcRkBWxPgadrqC",
+            "album_name": "Breakthrough!",
+            "album_release_date": "2020-06-24",
+            "album_release_date_precision": "day",
+            "features": {
+                "danceability": 0.394,
+                "energy": 0.947,
+                "key": 2,
+                "loudness": -3.411,
+                "mode": 1,
+                "speechiness": 0.0569,
+                "acousticness": 0.00561,
+                "instrumentalness": 0,
+                "liveness": 0.323,
+                "valence": 0.441,
+                "tempo": 175.983,
+                "type": "audio_features",
+                "id": "68NLAMcxHcRkBWxPgadrqC",
+                "uri": "spotify:track:68NLAMcxHcRkBWxPgadrqC",
+                "track_href": "https://api.spotify.com/v1/tracks/68NLAMcxHcRkBWxPgadrqC",
+                "analysis_url": "https://api.spotify.com/v1/audio-analysis/68NLAMcxHcRkBWxPgadrqC",
+                "duration_ms": 355300,
+                "time_signature": 4
+            }
+        },
+        {
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2XzrQN7hxZibYdVEbl0nO6"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/2XzrQN7hxZibYdVEbl0nO6",
+                    "id": "2XzrQN7hxZibYdVEbl0nO6",
+                    "name": "Poppin'Party",
+                    "type": "artist",
+                    "uri": "spotify:artist:2XzrQN7hxZibYdVEbl0nO6"
+                }
+            ],
+            "available_markets": [
+                "JP"
+            ],
+            "disc_number": 1,
+            "duration_ms": 316500,
+            "explicit": false,
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/3ChOQP9nJkBxuyR6hRbaxi"
+            },
+            "href": "https://api.spotify.com/v1/tracks/3ChOQP9nJkBxuyR6hRbaxi",
+            "id": "3ChOQP9nJkBxuyR6hRbaxi",
+            "is_local": false,
+            "name": "\u30ad\u30ba\u30ca\u30df\u30e5\u30fc\u30b8\u30c3\u30af\u266a",
+            "preview_url": "https://p.scdn.co/mp3-preview/c6319f5484dafa7f6d72b2ced46d0f4cbeb36aba?cid=b382848b54c2463d9baed53ddffc7075",
+            "track_number": 11,
+            "type": "track",
+            "uri": "spotify:track:3ChOQP9nJkBxuyR6hRbaxi",
+            "album_name": "Breakthrough!",
+            "album_release_date": "2020-06-24",
+            "album_release_date_precision": "day",
+            "features": {
+                "danceability": 0.528,
+                "energy": 0.947,
+                "key": 9,
+                "loudness": -2.535,
+                "mode": 1,
+                "speechiness": 0.0456,
+                "acousticness": 0.0112,
+                "instrumentalness": 1.86e-06,
+                "liveness": 0.241,
+                "valence": 0.692,
+                "tempo": 94.363,
+                "type": "audio_features",
+                "id": "3ChOQP9nJkBxuyR6hRbaxi",
+                "uri": "spotify:track:3ChOQP9nJkBxuyR6hRbaxi",
+                "track_href": "https://api.spotify.com/v1/tracks/3ChOQP9nJkBxuyR6hRbaxi",
+                "analysis_url": "https://api.spotify.com/v1/audio-analysis/3ChOQP9nJkBxuyR6hRbaxi",
+                "duration_ms": 316500,
+                "time_signature": 4
+            }
+        },
+        {
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2XzrQN7hxZibYdVEbl0nO6"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/2XzrQN7hxZibYdVEbl0nO6",
+                    "id": "2XzrQN7hxZibYdVEbl0nO6",
+                    "name": "Poppin'Party",
+                    "type": "artist",
+                    "uri": "spotify:artist:2XzrQN7hxZibYdVEbl0nO6"
+                }
+            ],
+            "available_markets": [
+                "JP"
+            ],
+            "disc_number": 1,
+            "duration_ms": 275566,
+            "explicit": false,
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/4xJGUNjq2y1bZzApZaRK58"
+            },
+            "href": "https://api.spotify.com/v1/tracks/4xJGUNjq2y1bZzApZaRK58",
+            "id": "4xJGUNjq2y1bZzApZaRK58",
+            "is_local": false,
+            "name": "\u30ad\u30e9\u30ad\u30e9\u30b9\u30bf\u30fc!",
+            "preview_url": "https://p.scdn.co/mp3-preview/90ec5f699cb516749fb6b6162e93d0e040f415c3?cid=b382848b54c2463d9baed53ddffc7075",
+            "track_number": 8,
+            "type": "track",
+            "uri": "spotify:track:4xJGUNjq2y1bZzApZaRK58",
+            "album_name": "Breakthrough!",
+            "album_release_date": "2020-06-24",
+            "album_release_date_precision": "day",
+            "features": {
+                "danceability": 0.506,
+                "energy": 0.936,
+                "key": 11,
+                "loudness": -2.664,
+                "mode": 1,
+                "speechiness": 0.0481,
+                "acousticness": 0.0125,
+                "instrumentalness": 0,
+                "liveness": 0.122,
+                "valence": 0.694,
+                "tempo": 150.038,
+                "type": "audio_features",
+                "id": "4xJGUNjq2y1bZzApZaRK58",
+                "uri": "spotify:track:4xJGUNjq2y1bZzApZaRK58",
+                "track_href": "https://api.spotify.com/v1/tracks/4xJGUNjq2y1bZzApZaRK58",
+                "analysis_url": "https://api.spotify.com/v1/audio-analysis/4xJGUNjq2y1bZzApZaRK58",
+                "duration_ms": 275567,
+                "time_signature": 4
+            }
+        },
+        {
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2XzrQN7hxZibYdVEbl0nO6"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/2XzrQN7hxZibYdVEbl0nO6",
+                    "id": "2XzrQN7hxZibYdVEbl0nO6",
+                    "name": "Poppin'Party",
+                    "type": "artist",
+                    "uri": "spotify:artist:2XzrQN7hxZibYdVEbl0nO6"
+                }
+            ],
+            "available_markets": [
+                "JP"
+            ],
+            "disc_number": 1,
+            "duration_ms": 248400,
+            "explicit": false,
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/1CIdp0zk5vDa8BGUqmuXV0"
+            },
+            "href": "https://api.spotify.com/v1/tracks/1CIdp0zk5vDa8BGUqmuXV0",
+            "id": "1CIdp0zk5vDa8BGUqmuXV0",
+            "is_local": false,
+            "name": "Step\u00d7Step!",
+            "preview_url": "https://p.scdn.co/mp3-preview/98f07edb43fa243755825d9cc56d8d672f950919?cid=b382848b54c2463d9baed53ddffc7075",
+            "track_number": 5,
+            "type": "track",
+            "uri": "spotify:track:1CIdp0zk5vDa8BGUqmuXV0",
+            "album_name": "Breakthrough!",
+            "album_release_date": "2020-06-24",
+            "album_release_date_precision": "day",
+            "features": {
+                "danceability": 0.536,
+                "energy": 0.882,
+                "key": 8,
+                "loudness": -2.702,
+                "mode": 1,
+                "speechiness": 0.0422,
+                "acousticness": 0.0164,
+                "instrumentalness": 0,
+                "liveness": 0.271,
+                "valence": 0.549,
+                "tempo": 147.953,
+                "type": "audio_features",
+                "id": "1CIdp0zk5vDa8BGUqmuXV0",
+                "uri": "spotify:track:1CIdp0zk5vDa8BGUqmuXV0",
+                "track_href": "https://api.spotify.com/v1/tracks/1CIdp0zk5vDa8BGUqmuXV0",
+                "analysis_url": "https://api.spotify.com/v1/audio-analysis/1CIdp0zk5vDa8BGUqmuXV0",
+                "duration_ms": 248400,
+                "time_signature": 4
+            }
+        },
+        {
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2XzrQN7hxZibYdVEbl0nO6"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/2XzrQN7hxZibYdVEbl0nO6",
+                    "id": "2XzrQN7hxZibYdVEbl0nO6",
+                    "name": "Poppin'Party",
+                    "type": "artist",
+                    "uri": "spotify:artist:2XzrQN7hxZibYdVEbl0nO6"
+                }
+            ],
+            "available_markets": [
+                "JP"
+            ],
+            "disc_number": 1,
+            "duration_ms": 280733,
+            "explicit": false,
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/1UC167fELocxYvvNhMquyP"
+            },
+            "href": "https://api.spotify.com/v1/tracks/1UC167fELocxYvvNhMquyP",
+            "id": "1UC167fELocxYvvNhMquyP",
+            "is_local": false,
+            "name": "Hello! Wink!",
+            "preview_url": "https://p.scdn.co/mp3-preview/93b355f803f09d963ce1b68f4587f36ad7da8962?cid=b382848b54c2463d9baed53ddffc7075",
+            "track_number": 4,
+            "type": "track",
+            "uri": "spotify:track:1UC167fELocxYvvNhMquyP",
+            "album_name": "Breakthrough!",
+            "album_release_date": "2020-06-24",
+            "album_release_date_precision": "day",
+            "features": {
+                "danceability": 0.516,
+                "energy": 0.938,
+                "key": 2,
+                "loudness": -3.164,
+                "mode": 0,
+                "speechiness": 0.0898,
+                "acousticness": 0.0043,
+                "instrumentalness": 0,
+                "liveness": 0.276,
+                "valence": 0.657,
+                "tempo": 151.834,
+                "type": "audio_features",
+                "id": "1UC167fELocxYvvNhMquyP",
+                "uri": "spotify:track:1UC167fELocxYvvNhMquyP",
+                "track_href": "https://api.spotify.com/v1/tracks/1UC167fELocxYvvNhMquyP",
+                "analysis_url": "https://api.spotify.com/v1/audio-analysis/1UC167fELocxYvvNhMquyP",
+                "duration_ms": 280733,
+                "time_signature": 4
+            }
+        },
+        {
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2XzrQN7hxZibYdVEbl0nO6"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/2XzrQN7hxZibYdVEbl0nO6",
+                    "id": "2XzrQN7hxZibYdVEbl0nO6",
+                    "name": "Poppin'Party",
+                    "type": "artist",
+                    "uri": "spotify:artist:2XzrQN7hxZibYdVEbl0nO6"
+                }
+            ],
+            "available_markets": [
+                "JP"
+            ],
+            "disc_number": 1,
+            "duration_ms": 273666,
+            "explicit": false,
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/2cXfTaVa7r0l89xjtnNODW"
+            },
+            "href": "https://api.spotify.com/v1/tracks/2cXfTaVa7r0l89xjtnNODW",
+            "id": "2cXfTaVa7r0l89xjtnNODW",
+            "is_local": false,
+            "name": "Breakthrough!",
+            "preview_url": "https://p.scdn.co/mp3-preview/3bf98722d7558548ca64953a61421a4493b1a5ac?cid=b382848b54c2463d9baed53ddffc7075",
+            "track_number": 1,
+            "type": "track",
+            "uri": "spotify:track:2cXfTaVa7r0l89xjtnNODW",
+            "album_name": "Breakthrough!",
+            "album_release_date": "2020-06-24",
+            "album_release_date_precision": "day",
+            "features": {
+                "danceability": 0.486,
+                "energy": 0.968,
+                "key": 5,
+                "loudness": -2.52,
+                "mode": 1,
+                "speechiness": 0.0665,
+                "acousticness": 0.0299,
+                "instrumentalness": 0,
+                "liveness": 0.185,
+                "valence": 0.694,
+                "tempo": 91.985,
+                "type": "audio_features",
+                "id": "2cXfTaVa7r0l89xjtnNODW",
+                "uri": "spotify:track:2cXfTaVa7r0l89xjtnNODW",
+                "track_href": "https://api.spotify.com/v1/tracks/2cXfTaVa7r0l89xjtnNODW",
+                "analysis_url": "https://api.spotify.com/v1/audio-analysis/2cXfTaVa7r0l89xjtnNODW",
+                "duration_ms": 273667,
+                "time_signature": 4
+            }
+        },
+        {
             "album": {
                 "album_type": "single",
                 "artists": [
