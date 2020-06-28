@@ -41,7 +41,7 @@ Manual changes made to `band-songs.json`:
 Manual changes made to `song-names.json`:
 - Removed all instrumental, acoustic, and short versions of songs, as above
 - Renamed `ぽっぴん'しゃっふる` to `ぽっぴん しゃっふる`, as above
-- Removed removed remastered versions
+- Removed remastered versions
 - Removed character songs and songs from temporary or minor bands (e.g. The Third, Glitter*Green) 
 - Sorted songs to match actual album and single release dates (songs released in same single/album are in same order as single/album)
 
