@@ -56,7 +56,7 @@ def get_arguments():
                         type=str,
                         metavar='band',
                         dest='band_with_albums',
-                        help='Get all albums by band name or abbreviation (e.g. ras, popipa, etc')
+                        help='Get all albums by band name or abbreviation (e.g. ras, popipa, etc)')
 
     parser.add_argument('--put-album-songs',
                         type=str,
