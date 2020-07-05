@@ -8,7 +8,7 @@ function showInCard(index, datasetIndex, chart) {
   const danceability = song.features.danceability;
   const energy = song.features.energy;
   const valence = song.features.valence;
-  const url = song.external_urls.spotify;
+  const url = song.uri;
 
   const card = document.querySelector('#song-card');
   card.style.display = 'block';
