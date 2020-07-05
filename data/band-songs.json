@@ -6833,60 +6833,6 @@
                 "JP"
             ],
             "disc_number": 1,
-            "duration_ms": 316500,
-            "explicit": false,
-            "external_urls": {
-                "spotify": "https://open.spotify.com/track/3ChOQP9nJkBxuyR6hRbaxi"
-            },
-            "href": "https://api.spotify.com/v1/tracks/3ChOQP9nJkBxuyR6hRbaxi",
-            "id": "3ChOQP9nJkBxuyR6hRbaxi",
-            "is_local": false,
-            "name": "\u30ad\u30ba\u30ca\u30df\u30e5\u30fc\u30b8\u30c3\u30af\u266a",
-            "preview_url": "https://p.scdn.co/mp3-preview/c6319f5484dafa7f6d72b2ced46d0f4cbeb36aba?cid=b382848b54c2463d9baed53ddffc7075",
-            "track_number": 11,
-            "type": "track",
-            "uri": "spotify:track:3ChOQP9nJkBxuyR6hRbaxi",
-            "album_name": "Breakthrough!",
-            "album_release_date": "2020-06-24",
-            "album_release_date_precision": "day",
-            "features": {
-                "danceability": 0.528,
-                "energy": 0.947,
-                "key": 9,
-                "loudness": -2.535,
-                "mode": 1,
-                "speechiness": 0.0456,
-                "acousticness": 0.0112,
-                "instrumentalness": 1.86e-06,
-                "liveness": 0.241,
-                "valence": 0.692,
-                "tempo": 94.363,
-                "type": "audio_features",
-                "id": "3ChOQP9nJkBxuyR6hRbaxi",
-                "uri": "spotify:track:3ChOQP9nJkBxuyR6hRbaxi",
-                "track_href": "https://api.spotify.com/v1/tracks/3ChOQP9nJkBxuyR6hRbaxi",
-                "analysis_url": "https://api.spotify.com/v1/audio-analysis/3ChOQP9nJkBxuyR6hRbaxi",
-                "duration_ms": 316500,
-                "time_signature": 4
-            }
-        },
-        {
-            "artists": [
-                {
-                    "external_urls": {
-                        "spotify": "https://open.spotify.com/artist/2XzrQN7hxZibYdVEbl0nO6"
-                    },
-                    "href": "https://api.spotify.com/v1/artists/2XzrQN7hxZibYdVEbl0nO6",
-                    "id": "2XzrQN7hxZibYdVEbl0nO6",
-                    "name": "Poppin'Party",
-                    "type": "artist",
-                    "uri": "spotify:artist:2XzrQN7hxZibYdVEbl0nO6"
-                }
-            ],
-            "available_markets": [
-                "JP"
-            ],
-            "disc_number": 1,
             "duration_ms": 275566,
             "explicit": false,
             "external_urls": {
