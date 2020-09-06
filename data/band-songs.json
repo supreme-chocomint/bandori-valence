@@ -1,6 +1,168 @@
 {
   "Roselia": [
     {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1bljHdc9g7V7ZLkYuf4yfy"
+          },
+          "href": "https://api.spotify.com/v1/artists/1bljHdc9g7V7ZLkYuf4yfy",
+          "id": "1bljHdc9g7V7ZLkYuf4yfy",
+          "name": "Roselia",
+          "type": "artist",
+          "uri": "spotify:artist:1bljHdc9g7V7ZLkYuf4yfy"
+        }
+      ],
+      "available_markets": [
+        "JP"
+      ],
+      "disc_number": 1,
+      "duration_ms": 241566,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/40EntUPer27Lm8l3Q0nd6i"
+      },
+      "href": "https://api.spotify.com/v1/tracks/40EntUPer27Lm8l3Q0nd6i",
+      "id": "40EntUPer27Lm8l3Q0nd6i",
+      "is_local": false,
+      "name": "Song I am.",
+      "preview_url": "https://p.scdn.co/mp3-preview/c9fb28dfc88e3634e65b630215e5340cf15018ae?cid=b382848b54c2463d9baed53ddffc7075",
+      "track_number": 12,
+      "type": "track",
+      "uri": "spotify:track:40EntUPer27Lm8l3Q0nd6i",
+      "album_name": "Wahl",
+      "album_release_date": "2020-07-15",
+      "album_release_date_precision": "day",
+      "features": {
+        "danceability": 0.328,
+        "energy": 0.972,
+        "key": 5,
+        "loudness": -2.596,
+        "mode": 0,
+        "speechiness": 0.206,
+        "acousticness": 0.000399,
+        "instrumentalness": 5.58e-06,
+        "liveness": 0.188,
+        "valence": 0.241,
+        "tempo": 190.009,
+        "type": "audio_features",
+        "id": "40EntUPer27Lm8l3Q0nd6i",
+        "uri": "spotify:track:40EntUPer27Lm8l3Q0nd6i",
+        "track_href": "https://api.spotify.com/v1/tracks/40EntUPer27Lm8l3Q0nd6i",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/40EntUPer27Lm8l3Q0nd6i",
+        "duration_ms": 241567,
+        "time_signature": 4
+      }
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1bljHdc9g7V7ZLkYuf4yfy"
+          },
+          "href": "https://api.spotify.com/v1/artists/1bljHdc9g7V7ZLkYuf4yfy",
+          "id": "1bljHdc9g7V7ZLkYuf4yfy",
+          "name": "Roselia",
+          "type": "artist",
+          "uri": "spotify:artist:1bljHdc9g7V7ZLkYuf4yfy"
+        }
+      ],
+      "available_markets": [
+        "JP"
+      ],
+      "disc_number": 1,
+      "duration_ms": 260466,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2ZWTPwcCA5dYRp0zG7UOAc"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2ZWTPwcCA5dYRp0zG7UOAc",
+      "id": "2ZWTPwcCA5dYRp0zG7UOAc",
+      "is_local": false,
+      "name": "Break your desire",
+      "preview_url": "https://p.scdn.co/mp3-preview/c50753f210904291ddd4e8cfd58fba1af8171b6a?cid=b382848b54c2463d9baed53ddffc7075",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:2ZWTPwcCA5dYRp0zG7UOAc",
+      "album_name": "Wahl",
+      "album_release_date": "2020-07-15",
+      "album_release_date_precision": "day",
+      "features": {
+        "danceability": 0.548,
+        "energy": 0.964,
+        "key": 10,
+        "loudness": -2.759,
+        "mode": 0,
+        "speechiness": 0.0521,
+        "acousticness": 0.015,
+        "instrumentalness": 0,
+        "liveness": 0.211,
+        "valence": 0.557,
+        "tempo": 102.531,
+        "type": "audio_features",
+        "id": "2ZWTPwcCA5dYRp0zG7UOAc",
+        "uri": "spotify:track:2ZWTPwcCA5dYRp0zG7UOAc",
+        "track_href": "https://api.spotify.com/v1/tracks/2ZWTPwcCA5dYRp0zG7UOAc",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/2ZWTPwcCA5dYRp0zG7UOAc",
+        "duration_ms": 260467,
+        "time_signature": 4
+      }
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1bljHdc9g7V7ZLkYuf4yfy"
+          },
+          "href": "https://api.spotify.com/v1/artists/1bljHdc9g7V7ZLkYuf4yfy",
+          "id": "1bljHdc9g7V7ZLkYuf4yfy",
+          "name": "Roselia",
+          "type": "artist",
+          "uri": "spotify:artist:1bljHdc9g7V7ZLkYuf4yfy"
+        }
+      ],
+      "available_markets": [
+        "JP"
+      ],
+      "disc_number": 1,
+      "duration_ms": 305500,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5SXRtIcYo4kaDgRyD54mZP"
+      },
+      "href": "https://api.spotify.com/v1/tracks/5SXRtIcYo4kaDgRyD54mZP",
+      "id": "5SXRtIcYo4kaDgRyD54mZP",
+      "is_local": false,
+      "name": "Avant-garde HISTORY",
+      "preview_url": "https://p.scdn.co/mp3-preview/3803c227ca4e273b5506485487ff4c4be7a4e2d6?cid=b382848b54c2463d9baed53ddffc7075",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:5SXRtIcYo4kaDgRyD54mZP",
+      "album_name": "Wahl",
+      "album_release_date": "2020-07-15",
+      "album_release_date_precision": "day",
+      "features": {
+        "danceability": 0.299,
+        "energy": 0.962,
+        "key": 6,
+        "loudness": -2.751,
+        "mode": 0,
+        "speechiness": 0.0896,
+        "acousticness": 0.00401,
+        "instrumentalness": 0,
+        "liveness": 0.112,
+        "valence": 0.378,
+        "tempo": 114.074,
+        "type": "audio_features",
+        "id": "5SXRtIcYo4kaDgRyD54mZP",
+        "uri": "spotify:track:5SXRtIcYo4kaDgRyD54mZP",
+        "track_href": "https://api.spotify.com/v1/tracks/5SXRtIcYo4kaDgRyD54mZP",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/5SXRtIcYo4kaDgRyD54mZP",
+        "duration_ms": 305500,
+        "time_signature": 3
+      }
+    },
+    {
       "album": {
         "album_type": "single",
         "artists": [
@@ -11937,6 +12099,222 @@
     }
   ],
   "Raise A Suilen": [
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6zPsF3A9PvZ4s0NG6z76up"
+          },
+          "href": "https://api.spotify.com/v1/artists/6zPsF3A9PvZ4s0NG6z76up",
+          "id": "6zPsF3A9PvZ4s0NG6z76up",
+          "name": "RAISE A SUILEN",
+          "type": "artist",
+          "uri": "spotify:artist:6zPsF3A9PvZ4s0NG6z76up"
+        }
+      ],
+      "available_markets": [
+        "JP"
+      ],
+      "disc_number": 1,
+      "duration_ms": 249366,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6yqe700NDSkrjkwLgzWWbB"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6yqe700NDSkrjkwLgzWWbB",
+      "id": "6yqe700NDSkrjkwLgzWWbB",
+      "is_local": false,
+      "name": "REIGNING",
+      "preview_url": "https://p.scdn.co/mp3-preview/2a0829202c1281028fb14d5c5b541dc35e900694?cid=b382848b54c2463d9baed53ddffc7075",
+      "track_number": 10,
+      "type": "track",
+      "uri": "spotify:track:6yqe700NDSkrjkwLgzWWbB",
+      "album_name": "ERA",
+      "album_release_date": "2020-08-19",
+      "album_release_date_precision": "day",
+      "features": {
+        "danceability": 0.427,
+        "energy": 0.957,
+        "key": 5,
+        "loudness": -2.673,
+        "mode": 1,
+        "speechiness": 0.0929,
+        "acousticness": 0.00228,
+        "instrumentalness": 0,
+        "liveness": 0.292,
+        "valence": 0.314,
+        "tempo": 91.293,
+        "type": "audio_features",
+        "id": "6yqe700NDSkrjkwLgzWWbB",
+        "uri": "spotify:track:6yqe700NDSkrjkwLgzWWbB",
+        "track_href": "https://api.spotify.com/v1/tracks/6yqe700NDSkrjkwLgzWWbB",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/6yqe700NDSkrjkwLgzWWbB",
+        "duration_ms": 249367,
+        "time_signature": 4
+      }
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6zPsF3A9PvZ4s0NG6z76up"
+          },
+          "href": "https://api.spotify.com/v1/artists/6zPsF3A9PvZ4s0NG6z76up",
+          "id": "6zPsF3A9PvZ4s0NG6z76up",
+          "name": "RAISE A SUILEN",
+          "type": "artist",
+          "uri": "spotify:artist:6zPsF3A9PvZ4s0NG6z76up"
+        }
+      ],
+      "available_markets": [
+        "JP"
+      ],
+      "disc_number": 1,
+      "duration_ms": 265733,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4EqT5Y6FEicelhWTbmCzPr"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4EqT5Y6FEicelhWTbmCzPr",
+      "id": "4EqT5Y6FEicelhWTbmCzPr",
+      "is_local": false,
+      "name": "!NVADE SHOW!",
+      "preview_url": "https://p.scdn.co/mp3-preview/d0f4802e4b443fd7b652da908a3679965a9de79b?cid=b382848b54c2463d9baed53ddffc7075",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:4EqT5Y6FEicelhWTbmCzPr",
+      "album_name": "ERA",
+      "album_release_date": "2020-08-19",
+      "album_release_date_precision": "day",
+      "features": {
+        "danceability": 0.362,
+        "energy": 0.975,
+        "key": 1,
+        "loudness": -1.944,
+        "mode": 0,
+        "speechiness": 0.143,
+        "acousticness": 0.00101,
+        "instrumentalness": 0,
+        "liveness": 0.273,
+        "valence": 0.614,
+        "tempo": 83.984,
+        "type": "audio_features",
+        "id": "4EqT5Y6FEicelhWTbmCzPr",
+        "uri": "spotify:track:4EqT5Y6FEicelhWTbmCzPr",
+        "track_href": "https://api.spotify.com/v1/tracks/4EqT5Y6FEicelhWTbmCzPr",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/4EqT5Y6FEicelhWTbmCzPr",
+        "duration_ms": 265733,
+        "time_signature": 4
+      }
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6zPsF3A9PvZ4s0NG6z76up"
+          },
+          "href": "https://api.spotify.com/v1/artists/6zPsF3A9PvZ4s0NG6z76up",
+          "id": "6zPsF3A9PvZ4s0NG6z76up",
+          "name": "RAISE A SUILEN",
+          "type": "artist",
+          "uri": "spotify:artist:6zPsF3A9PvZ4s0NG6z76up"
+        }
+      ],
+      "available_markets": [
+        "JP"
+      ],
+      "disc_number": 1,
+      "duration_ms": 256666,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0CqlIR5fcvENyg0jyPmUdS"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0CqlIR5fcvENyg0jyPmUdS",
+      "id": "0CqlIR5fcvENyg0jyPmUdS",
+      "is_local": false,
+      "name": "Beautiful Birthday",
+      "preview_url": "https://p.scdn.co/mp3-preview/aa45b8cd1aeb760efa3c843d949f4a9070973c1d?cid=b382848b54c2463d9baed53ddffc7075",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:0CqlIR5fcvENyg0jyPmUdS",
+      "album_name": "ERA",
+      "album_release_date": "2020-08-19",
+      "album_release_date_precision": "day",
+      "features": {
+        "danceability": 0.407,
+        "energy": 0.966,
+        "key": 11,
+        "loudness": -2.573,
+        "mode": 0,
+        "speechiness": 0.077,
+        "acousticness": 0.000498,
+        "instrumentalness": 0,
+        "liveness": 0.334,
+        "valence": 0.393,
+        "tempo": 87.515,
+        "type": "audio_features",
+        "id": "0CqlIR5fcvENyg0jyPmUdS",
+        "uri": "spotify:track:0CqlIR5fcvENyg0jyPmUdS",
+        "track_href": "https://api.spotify.com/v1/tracks/0CqlIR5fcvENyg0jyPmUdS",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/0CqlIR5fcvENyg0jyPmUdS",
+        "duration_ms": 256667,
+        "time_signature": 4
+      }
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6zPsF3A9PvZ4s0NG6z76up"
+          },
+          "href": "https://api.spotify.com/v1/artists/6zPsF3A9PvZ4s0NG6z76up",
+          "id": "6zPsF3A9PvZ4s0NG6z76up",
+          "name": "RAISE A SUILEN",
+          "type": "artist",
+          "uri": "spotify:artist:6zPsF3A9PvZ4s0NG6z76up"
+        }
+      ],
+      "available_markets": [
+        "JP"
+      ],
+      "disc_number": 1,
+      "duration_ms": 239966,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4zW9Spz45gMgnSjSkdI7pD"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4zW9Spz45gMgnSjSkdI7pD",
+      "id": "4zW9Spz45gMgnSjSkdI7pD",
+      "is_local": false,
+      "name": "SOUL SOLDIER",
+      "preview_url": "https://p.scdn.co/mp3-preview/53d0f5e38b8d2f63e77125fdcc8adab909cbbd43?cid=b382848b54c2463d9baed53ddffc7075",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:4zW9Spz45gMgnSjSkdI7pD",
+      "album_name": "ERA",
+      "album_release_date": "2020-08-19",
+      "album_release_date_precision": "day",
+      "features": {
+        "danceability": 0.484,
+        "energy": 0.971,
+        "key": 11,
+        "loudness": -2.727,
+        "mode": 0,
+        "speechiness": 0.0907,
+        "acousticness": 0.00163,
+        "instrumentalness": 1.19e-06,
+        "liveness": 0.177,
+        "valence": 0.526,
+        "tempo": 96.003,
+        "type": "audio_features",
+        "id": "4zW9Spz45gMgnSjSkdI7pD",
+        "uri": "spotify:track:4zW9Spz45gMgnSjSkdI7pD",
+        "track_href": "https://api.spotify.com/v1/tracks/4zW9Spz45gMgnSjSkdI7pD",
+        "analysis_url": "https://api.spotify.com/v1/audio-analysis/4zW9Spz45gMgnSjSkdI7pD",
+        "duration_ms": 239967,
+        "time_signature": 4
+      }
+    },
     {
       "album": {
         "album_type": "single",
