@@ -86,7 +86,7 @@ def dump_band_songs(spotify, out_filename):
             pass
 
     with open(out_filename, 'w') as f:
-        json.dump(data, f, indent=4)
+        json.dump(data, f, indent=2)
 
 
 def dump_song_name_list(spotify, out_filename):
@@ -102,7 +102,7 @@ def dump_song_name_list(spotify, out_filename):
         print(track['name'])
 
     with open(out_filename, 'w') as f:
-        json.dump({'names': data}, f, indent=4)
+        json.dump({'names': data}, f, indent=2)
 
 
 def get_playlist_tracks_with_metadata(spotify, playlist_id):
@@ -212,7 +212,7 @@ def put_album_songs(spotify, albums_ids):
                 raise ValueError(f'Song "{track["name"]}" not from a recognized band.')
 
     with open(BAND_SONGS_FILE, 'w') as f:
-        json.dump(data, f, indent=4)
+        json.dump(data, f, indent=2)
 
 
 def collect(spotify, results, page_operation=None):
